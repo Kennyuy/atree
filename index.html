@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1080, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>2025 新年快乐</title>
   <script src="index.js"></script>
   <style>
@@ -16,23 +16,18 @@
     body {
       background: black;
       font-family: 'Arial', sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-      color: white;
     }
 
-    /* 设置顶部文本的样式 */
+    /* 设置顶部文本的容器 */
     .header {
+      position: absolute;
+      top: 20px;
+      width: 100%;
       text-align: center;
       color: #ffcc00;
-      font-size: 5rem; /* 根据屏幕调整字体大小 */
+      font-size: 3rem;
       font-family: 'Brush Script MT', cursive;
       animation: fadeInOut 3s infinite;
-      margin-bottom: 20px;
     }
 
     /* 动态的文本效果 */
@@ -51,15 +46,39 @@
       }
     }
 
-    /* 设置画布的样式 */
+    /* 设置画布 */
     canvas {
       background: black;
       display: block;
-      width: 85vw; /* 画布宽度设置为屏幕宽度的85% */
-      height: 85vw; /* 画布高度也为屏幕宽度的85% */
-      max-width: 600px; /* 最大宽度限制 */
-      max-height: 600px; /* 最大高度限制 */
-      margin-top: 20px;
+      margin: 100px auto;
+      border: 2px solid #fff;
+    }
+
+    /* 针对手机屏幕的适配 */
+    @media screen and (max-width: 768px) {
+      .header {
+        font-size: 2rem; /* 调整字体大小 */
+        top: 10px;
+      }
+
+      canvas {
+        width: 90vw;  /* 根据屏幕宽度调整画布大小 */
+        height: 90vw; /* 画布宽高一致，避免失真 */
+        margin: 20px auto; /* 适配屏幕 */
+      }
+    }
+
+    /* 针对更小屏幕（如某些小型手机）的适配 */
+    @media screen and (max-width: 480px) {
+      .header {
+        font-size: 1.5rem; /* 进一步减小字体 */
+        top: 5px;
+      }
+
+      canvas {
+        width: 85vw; /* 减小画布尺寸 */
+        height: 85vw; /* 保持画布比例 */
+      }
     }
   </style>
 </head>
@@ -69,7 +88,7 @@
   <div class="header">2025 新年快乐</div>
 
   <!-- 用于展示动画的画布 -->
-  <canvas id="scene"></canvas>
+  <canvas id="scene" width="500px" height="500px"></canvas>
 </body>
 
 </html>
