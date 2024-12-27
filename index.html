@@ -1,18 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 
-  <head>
-    <script src="index.js"></script>
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025 新年快乐</title>
+  <script src="index.js"></script>
+  <style>
+    /* 统一去除 padding 和 margin */
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background: black;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* 设置顶部文本的容器 */
+    .header {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      text-align: center;
+      color: #ffcc00;
+      font-size: 3rem;
+      font-family: 'Brush Script MT', cursive;
+      animation: fadeInOut 3s infinite;
+    }
+
+    /* 动态的文本效果 */
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
       }
-    </style>
-  </head>
+      50% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+    }
 
-  <body onload="run()" style="background:black">
-    <canvas id="scene" width="500px" height="500px" style="background:black; display: block; margin: 0 auto"></canvas>
-  </body>
+    /* 设置画布 */
+    canvas {
+      background: black;
+      display: block;
+      margin: 100px auto;
+    }
+  </style>
+</head>
+
+<body onload="run()">
+  <!-- 顶部的新年祝福文本 -->
+  <div class="header">2025 新年快乐</div>
+
+  <!-- 用于展示动画的画布 -->
+  <canvas id="scene" width="500px" height="500px"></canvas>
+</body>
 
 </html>
