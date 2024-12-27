@@ -36,6 +36,3 @@ So, what's left? Just small changes which could make this tree perfect:
 
 # Happy Holidays!
 
-# license
-
-MIT
