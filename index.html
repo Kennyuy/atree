@@ -26,11 +26,10 @@
       text-align: center;
       color: #ffcc00;
       font-size: 3rem;
-      font-family: 'Brush Script MT', cursive;
       animation: fadeInOut 3s infinite;
     }
 
-    /* 动态的文本效果 */
+       /* 动态的文本效果 */
     @keyframes fadeInOut {
       0% {
         opacity: 0;
@@ -51,10 +50,9 @@
       background: black;
       display: block;
       margin: 100px auto;
-      border: 2px solid #fff;
     }
 
-    /* 针对手机屏幕的适配 */
+    /* 针对屏幕宽度适配 */
     @media screen and (max-width: 768px) {
       .header {
         font-size: 2rem; /* 调整字体大小 */
@@ -65,6 +63,20 @@
         width: 90vw;  /* 根据屏幕宽度调整画布大小 */
         height: 90vw; /* 画布宽高一致，避免失真 */
         margin: 20px auto; /* 适配屏幕 */
+      }
+    }
+
+    /* 针对6.7寸手机（更大屏幕）进行适配 */
+    @media screen and (max-width: 800px) {
+      .header {
+        font-size: 2.5rem; /* 调整字体大小以适应较大手机屏幕 */
+        top: 15px;
+      }
+
+      canvas {
+        width: 85vw;  /* 适度缩小画布，避免过大 */
+        height: 85vw; /* 保持比例 */
+        margin: 30px auto; /* 上下间距适配 */
       }
     }
 
@@ -82,6 +94,13 @@
     }
   </style>
 </head>
+
+<body onload="run()">
+  <!-- 顶部的新年祝福文本 -->
+  <div class="header">2025 新年快乐</div>
+
+  <!-- 用于展示动画的画布 -->
+  <canvas id="scene" width="500px" height="500px"></canvas>
 
 <body onload="run()">
   <!-- 顶部的新年祝福文本 -->
