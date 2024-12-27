@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=1080, initial-scale=1.0">
   <title>2025 新年快乐</title>
   <script src="index.js"></script>
   <style>
@@ -29,7 +29,7 @@
     .header {
       text-align: center;
       color: #ffcc00;
-      font-size: 4rem;
+      font-size: 5rem; /* 根据屏幕调整字体大小 */
       font-family: 'Brush Script MT', cursive;
       animation: fadeInOut 3s infinite;
       margin-bottom: 20px;
@@ -55,10 +55,10 @@
     canvas {
       background: black;
       display: block;
-      width: 80vw; /* 设置为屏幕宽度的 80% */
-      height: 80vw; /* 使画布保持正方形 */
-      max-width: 500px; /* 最大宽度为 500px */
-      max-height: 500px; /* 最大高度为 500px */
+      width: 85vw; /* 画布宽度设置为屏幕宽度的85% */
+      height: 85vw; /* 画布高度也为屏幕宽度的85% */
+      max-width: 600px; /* 最大宽度限制 */
+      max-height: 600px; /* 最大高度限制 */
       margin-top: 20px;
     }
   </style>
@@ -70,71 +70,6 @@
 
   <!-- 用于展示动画的画布 -->
   <canvas id="scene"></canvas>
-</body>
-
-</html><!DOCTYPE html>
-<html lang="zh">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2025 新年快乐</title>
-  <script src="index.js"></script>
-  <style>
-    /* 统一去除 padding 和 margin */
-    * {
-      padding: 0;
-      margin: 0;
-    }
-
-    body {
-      background: black;
-      font-family: 'Arial', sans-serif;
-    }
-
-    /* 设置顶部文本的容器 */
-    .header {
-      position: absolute;
-      top: 20px;
-      width: 100%;
-      text-align: center;
-      color: #ffcc00;
-      font-size: 3rem;
-      font-family: 'Brush Script MT', cursive;
-      animation: fadeInOut 3s infinite;
-    }
-
-    /* 动态的文本效果 */
-    @keyframes fadeInOut {
-      0% {
-        opacity: 0;
-        transform: scale(0.5);
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1);
-      }
-      100% {
-        opacity: 0;
-        transform: scale(0.5);
-      }
-    }
-
-    /* 设置画布 */
-    canvas {
-      background: black;
-      display: block;
-      margin: 100px auto;
-    }
-  </style>
-</head>
-
-<body onload="run()">
-  <!-- 顶部的新年祝福文本 -->
-  <div class="header">2025 新年快乐</div>
-
-  <!-- 用于展示动画的画布 -->
-  <canvas id="scene" width="500px" height="500px"></canvas>
 </body>
 
 </html>
