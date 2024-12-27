@@ -16,6 +16,80 @@
     body {
       background: black;
       font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      color: white;
+    }
+
+    /* 设置顶部文本的样式 */
+    .header {
+      text-align: center;
+      color: #ffcc00;
+      font-size: 4rem;
+      font-family: 'Brush Script MT', cursive;
+      animation: fadeInOut 3s infinite;
+      margin-bottom: 20px;
+    }
+
+    /* 动态的文本效果 */
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+    }
+
+    /* 设置画布的样式 */
+    canvas {
+      background: black;
+      display: block;
+      width: 80vw; /* 设置为屏幕宽度的 80% */
+      height: 80vw; /* 使画布保持正方形 */
+      max-width: 500px; /* 最大宽度为 500px */
+      max-height: 500px; /* 最大高度为 500px */
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body onload="run()">
+  <!-- 顶部的新年祝福文本 -->
+  <div class="header">2025 新年快乐</div>
+
+  <!-- 用于展示动画的画布 -->
+  <canvas id="scene"></canvas>
+</body>
+
+</html><!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025 新年快乐</title>
+  <script src="index.js"></script>
+  <style>
+    /* 统一去除 padding 和 margin */
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background: black;
+      font-family: 'Arial', sans-serif;
     }
 
     /* 设置顶部文本的容器 */
